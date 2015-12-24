@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.MemberEntity" table="MEMBER" schema="" catalog="athapong_amulet">
+        <id name="memberId">
+            <column name="MEMBER_ID" sql-type="int" not-null="true"/>
+        </id>
+        <property name="fname">
+            <column name="FNAME" sql-type="varchar" length="250"/>
+        </property>
+        <property name="lname">
+            <column name="LNAME" sql-type="varchar" length="250"/>
+        </property>
+        <property name="sex">
+            <column name="SEX" sql-type="char" length="1"/>
+        </property>
+        <property name="birthDate">
+            <column name="BIRTH_DATE" sql-type="date"/>
+        </property>
+        <property name="pmtDate">
+            <column name="PMT_DATE" sql-type="date"/>
+        </property>
+        <property name="idCard">
+            <column name="ID_CARD" sql-type="varchar" length="19"/>
+        </property>
+        <property name="id4scan">
+            <column name="ID4SCAN" sql-type="varchar" length="250"/>
+        </property>
+        <property name="phoneNo2">
+            <column name="PHONE_NO2" sql-type="varchar" length="250"/>
+        </property>
+        <property name="idCardPic">
+            <column name="ID_CARD_PIC" sql-type="varchar" length="250"/>
+        </property>
+        <property name="idHomePic">
+            <column name="ID_HOME_PIC" sql-type="varchar" length="250"/>
+        </property>
+        <property name="email">
+            <column name="EMAIL" sql-type="varchar" length="250"/>
+        </property>
+        <property name="timeStamp">
+            <column name="TIME_STAMP" sql-type="timestamp" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

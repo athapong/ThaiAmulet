@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="resources/jquery-ui-1.11.3.custom/external/jquery/jquery.js"></script>
+</head>
+<script>
+    url = "http://localhost:8080/ThaiAmulet/MBPmtCheckSrvInq";
+//    url = "http://thaiamulet-thaiamulet.rhcloud.com/ThaiAmulet/MBPmtCheckSrvInq";
+    input = "{\"id4scan\":\"358716055509326\"}";
+
+
+    $.post( url, input)
+        .done(function( data ) {
+            $("#out").html(json2html(data));
+        });
+
+    function json2html(json) {
+        var i, ret = "";
+        ret += "<ul>";
+        for( i in json) {
+            ret += "<li>"+i+": ";
+            if( typeof json[i] === "object") ret += json2html(json[i]);
+            else ret += json[i];
+            ret += "</li>";
+        }
+        ret += "</ul>";
+        return ret;
+    }
+</script>
+<body>
+<span id="out"/>
+</body>
+</html>

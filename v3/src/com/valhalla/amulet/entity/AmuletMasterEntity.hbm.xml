@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.AmuletMasterEntity" table="AMULET_MASTER" schema="" catalog="athapong_amulet">
+        <id name="amuletCode">
+            <column name="AMULET_CODE" sql-type="int" not-null="true"/>
+            <generator class="increment"/>
+        </id>
+        <property name="amuletName">
+            <column name="AMULET_NAME" sql-type="varchar" length="100"/>
+        </property>
+        <property name="sWidth">
+            <column name="S_WIDTH" sql-type="decimal" precision="10" scale="2"/>
+        </property>
+        <property name="sLong">
+            <column name="S_LONG" sql-type="decimal" precision="10" scale="2"/>
+        </property>
+        <property name="sTall">
+            <column name="S_TALL" sql-type="decimal" precision="10" scale="2"/>
+        </property>
+        <property name="material">
+            <column name="MATERIAL" sql-type="varchar" length="25"/>
+        </property>
+        <property name="yearFrom">
+            <column name="YEAR_FROM" sql-type="varchar" length="4"/>
+        </property>
+        <property name="yearTo">
+            <column name="YEAR_TO" sql-type="varchar" length="4"/>
+        </property>
+        <property name="form1">
+            <column name="FORM_1" sql-type="varchar" length="3"/>
+        </property>
+        <property name="form2">
+            <column name="FORM_2" sql-type="varchar" length="3"/>
+        </property>
+        <property name="amuletCharacter">
+            <column name="AMULET_CHARACTER" sql-type="varchar" length="25"/>
+        </property>
+        <property name="color">
+            <column name="COLOR" sql-type="varchar" length="25"/>
+        </property>
+        <property name="vernerable">
+            <column name="VERNERABLE" sql-type="varchar" length="45"/>
+        </property>
+        <property name="temple">
+            <column name="TEMPLE" sql-type="varchar" length="45"/>
+        </property>
+        <property name="regionCode">
+            <column name="REGION_CODE" sql-type="varchar" length="5"/>
+        </property>
+        <property name="provinceCode">
+            <column name="PROVINCE_CODE" sql-type="varchar" length="5"/>
+        </property>
+        <property name="amphurCode">
+            <column name="AMPHUR_CODE" sql-type="varchar" length="5"/>
+        </property>
+        <property name="districtCode">
+            <column name="DISTRICT_CODE" sql-type="varchar" length="5"/>
+        </property>
+        <property name="chamber">
+            <column name="CHAMBER" sql-type="varchar" length="25"/>
+        </property>
+        <property name="matType1">
+            <column name="MAT_TYPE_1" sql-type="varchar" length="45"/>
+        </property>
+        <property name="matType2">
+            <column name="MAT_TYPE_2" sql-type="varchar" length="45"/>
+        </property>
+        <property name="locketFl">
+            <column name="LOCKET_FL" sql-type="varchar" length="45"/>
+        </property>
+        <property name="meditationL">
+            <column name="MEDITATION_L" sql-type="decimal" precision="10" scale="2"/>
+        </property>
+        <property name="priceFrom">
+            <column name="PRICE_FROM" sql-type="decimal" precision="10" scale="2"/>
+        </property>
+        <property name="priceTo">
+            <column name="PRICE_TO" sql-type="decimal" precision="10" scale="2"/>
+        </property>
+
+        <property name="defectDes1">
+            <column name="DEFECT_DES_1" sql-type="text" length="65535"/>
+        </property>
+
+        <property name="matDes1">
+            <column name="MAT_DES_1" sql-type="text" length="65535"/>
+        </property>
+        <property name="matDes2">
+            <column name="MAT_DES_2" sql-type="text" length="65535"/>
+        </property>
+        <property name="matDes3">
+            <column name="MAT_DES_3" sql-type="text" length="65535"/>
+        </property>
+        <property name="matDes4">
+            <column name="MAT_DES_4" sql-type="text" length="65535"/>
+        </property>
+        <property name="rating">
+            <column name="RATING" sql-type="varchar" length="3"/>
+        </property>
+        <property name="note">
+            <column name="NOTE" sql-type="text" length="65535"/>
+        </property>
+        <property name="amuletPic">
+            <column name="AMULET_PIC" sql-type="varchar" length="250"/>
+        </property>
+    </class>
+</hibernate-mapping>

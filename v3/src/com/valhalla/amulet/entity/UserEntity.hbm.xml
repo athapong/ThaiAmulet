@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.UserEntity" table="USER" schema="" catalog="athapong_amulet">
+        <id name="userId">
+            <column name="USER_ID" sql-type="int unsigned" not-null="true"/>
+            <generator class="increment"/>
+        </id>
+        <property name="userName">
+            <column name="USER_NAME" sql-type="varchar" length="50" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="PASSWORD" sql-type="varchar" length="32"/>
+        </property>
+        <property name="roleCode">
+            <column name="ROLE_CODE" sql-type="varchar" length="3"/>
+        </property>
+        <property name="loginStatus">
+            <column name="LOGIN_STATUS" sql-type="char" length="1"/>
+        </property>
+        <property name="timeStamp">
+            <column name="TIME_STAMP" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="searchCnt">
+            <column name="SEARCH_CNT" sql-type="int" not-null="true"/>
+        </property>
+        <property name="uuid">
+            <column name="UUID" sql-type="varchar" length="36"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.DefectDescEntity" table="DEFECT_DESC" schema="" catalog="athapong_amulet">
+        <id name="defectDescCode">
+            <column name="DEFECT_DESC_CODE" sql-type="int" not-null="true"/>
+        </id>
+        <property name="defectDescDesc">
+            <column name="DEFECT_DESC_DESC" sql-type="varchar" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

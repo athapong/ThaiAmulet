@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.NewsEntity" table="NEWS" schema="" catalog="athapong_amulet">
+        <id name="newsCode">
+            <column name="NEWS_CODE" sql-type="int" not-null="true"/>
+            <generator class="increment"/>
+        </id>
+        <property name="newsDate">
+            <column name="NEWS_DATE" sql-type="date"/>
+        </property>
+        <property name="newsCat">
+            <column name="NEWS_CAT" sql-type="varchar" length="3"/>
+        </property>
+        <property name="newsSubj">
+            <column name="NEWS_SUBJ" sql-type="text" length="65535"/>
+        </property>
+        <property name="newsDesc">
+            <column name="NEWS_DESC" sql-type="text" length="65535"/>
+        </property>
+        <property name="viewCount">
+            <column name="VIEW_COUNT" sql-type="int" not-null="true"/>
+        </property>
+        <property name="newsPic">
+            <column name="NEWS_PIC" sql-type="varchar"/>
+        </property>
+        <property name="newsTime">
+            <column name="NEWS_TIME" sql-type="time"/>
+        </property>
+    </class>
+</hibernate-mapping>

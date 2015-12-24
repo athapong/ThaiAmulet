@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.RoleEntity" table="ROLE" schema="" catalog="athapong_amulet">
+        <id name="roleCode">
+            <column name="ROLE_CODE" sql-type="varchar" length="3" not-null="true"/>
+        </id>
+        <property name="roleName">
+            <column name="ROLE_NAME" sql-type="varchar" length="250"/>
+        </property>
+    </class>
+</hibernate-mapping>

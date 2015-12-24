@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.ProvinceEntity" table="PROVINCE" schema="" catalog="athapong_amulet">
+        <id name="provinceId">
+            <column name="PROVINCE_ID" sql-type="int" not-null="true"/>
+        </id>
+        <property name="provinceCode">
+            <column name="PROVINCE_CODE" sql-type="varchar" length="2" not-null="true"/>
+        </property>
+        <property name="provinceName">
+            <column name="PROVINCE_NAME" sql-type="varchar" length="150" not-null="true"/>
+        </property>
+        <property name="geoId">
+            <column name="GEO_ID" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

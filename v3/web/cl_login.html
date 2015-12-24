@@ -1,0 +1,65 @@
+<html>
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <script src="./resources/jquery-ui-1.11.3.custom/external/jquery/jquery.js"></script>
+    <script src="./resources/message.js"></script>
+</head>
+<script>
+    $(function() {
+        $("input#usernameTxt").on({
+            keydown: function(e) {
+                if (e.which === 32)
+                    return false;
+            },
+            change: function() {
+                // Regex-remove all spaces in the final value
+                this.value = this.value.replace(/\s/g, "");
+            }
+        });
+    });
+
+</script>
+<body>
+    <table width="100%" border="0">
+        <tr>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left_header" colspan="3">Login</td>
+        </tr>
+        <tr>
+            <td class="menu_dot" colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left" style="text-align: right; padding-right: 5px; height: 35px;">User Name</td>
+            <td class="menu_left" style="text-align: left;"><input class="input_box" type="text" name="usernameTxt" id="usernameTxt" required maxlength="25"/></td>
+            <td class="menu_left">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left" style="text-align: right; padding-right: 5px;">Password</td>
+            <td class="menu_left" style="text-align: left;"><input class="input_box" type="password" name="passwordTxt" required/></td>
+            <td class="menu_left">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="menu_left" colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left"><input type="checkbox" class="checkbox" name="remember" value="true">Remember me &nbsp;&nbsp;<a href="forgtpwdpage" class="menu_left" style="text-decoration: none;">ลืมรหัสผ่าน</a></td></td>
+            <td class="menu_left"></td>
+        </tr>
+        <tr>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left">&nbsp;</td>
+            <td class="menu_left"><input type="submit" class="button" value="      เข้าสู่ระบบ      "></td>
+            <td class="menu_left">&nbsp;</td>
+        </tr>
+    </table>
+
+</body>
+</html>

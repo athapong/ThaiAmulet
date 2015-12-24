@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.valhalla.amulet.entity.MatType1Entity" table="MAT_TYPE_1" schema="" catalog="athapong_amulet">
+        <id name="matType1Code">
+            <column name="MAT_TYPE_1_CODE" sql-type="int" not-null="true"/>
+        </id>
+        <property name="matType1Desc">
+            <column name="MAT_TYPE1_DESC" sql-type="varchar" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

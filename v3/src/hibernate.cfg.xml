@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!--<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/thaiamulet</property>-->
+        <!--<property name="hibernate.connection.username">thaiamuletdb</property>-->
+        <!--<property name="hibernate.connection.password">thaiamuletdb</property>-->
+
+        <property name="show_sql">true</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/athapong_amulet</property>
+        <property name="hibernate.connection.username">athapong_amulet</property>
+        <property name="hibernate.connection.password">8Yk@W#9i6</property>
+
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">10</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <!--<property name="hibernate.jdbc.batch_size">20</property>-->
+        <!--<property name="hibernate.connection.CharSet">UTF-8</property>-->
+        <!--<property name="hibernate.connection.characterEncoding">UTF-8</property>-->
+        <!--<property name="hibernate.connection.useUnicode">true</property>-->
+        <!--<property name="hibernate.show_sql">false</property>-->
+        <!-- JDBC connection pool -->
+
+        <mapping resource="com/valhalla/amulet/entity/MemberEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.MemberEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/NewsEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.NewsEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/RoleEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.RoleEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/UserEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.UserEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/AmuletMasterEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.AmuletMasterEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/AmuletKnowHowEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.AmuletKnowhowEntity"/>
+        <mapping class="com.valhalla.amulet.entity.SearchStatisticEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/SearchStatisticEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.AmphurEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/AmphurEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.ProvinceEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/ProvinceEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.RegionEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/RegionEntity.hbm.xml"/>
+        <mapping resource="com/valhalla/amulet/entity/TambolEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.TambolEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/ChamberEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.ChamberEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/CharacterEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.CharacterEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/ColorEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.ColorEntity"/>
+        <mapping class="com.valhalla.amulet.entity.DefectDescEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/DefectDescEntity.hbm.xml"/>
+        <mapping resource="com/valhalla/amulet/entity/DefectPositionEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.DefectPositionEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/Form1Entity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.Form1Entity"/>
+        <mapping resource="com/valhalla/amulet/entity/Form2Entity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.Form2Entity"/>
+        <mapping class="com.valhalla.amulet.entity.LocketEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/LocketEntity.hbm.xml"/>
+        <mapping resource="com/valhalla/amulet/entity/MatDescEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.MatDescEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/RatingEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.RatingEntity"/>
+        <mapping resource="com/valhalla/amulet/entity/MatType1Entity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.MatType1Entity"/>
+        <mapping resource="com/valhalla/amulet/entity/MatType2Entity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.MatType2Entity"/>
+        <mapping resource="com/valhalla/amulet/entity/MaterialEntity.hbm.xml"/>
+        <mapping class="com.valhalla.amulet.entity.MaterialEntity"/>
+    </session-factory>
+</hibernate-configuration>
